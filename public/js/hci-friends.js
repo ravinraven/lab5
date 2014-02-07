@@ -3,8 +3,14 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$("a").click(
+	 clinkname );
 })
 
+function clinkname( event ){
+	event.preventDefault();
+	$(this).html( anagrammedName( $(this).text() ) )
+}
 /*
  * Function that is called when the document is ready.
  */
